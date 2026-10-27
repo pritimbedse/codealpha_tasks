@@ -1,0 +1,9 @@
+Model,Features,CV_R2,CV_R2_std,Test_R2,Test_MAE,Test_RMSE
+Poly deg-2 + Ridge,TV+Radio,0.9817,0.0166,0.9885,0.4932,0.6034
+Gradient Boosting,TV+Radio+Newspaper,0.9702,0.0158,0.9855,0.5724,0.6766
+Linear + interaction,TV+Radio+TV_x_Radio,0.959,0.0279,0.9743,0.6664,0.9015
+Random Forest,TV+Radio+Newspaper,0.9567,0.0153,0.9787,0.6558,0.8201
+Linear (TV+Radio),TV+Radio,0.8736,0.0726,0.9006,1.4443,1.7714
+Lasso,TV+Radio+Newspaper,0.8715,0.0688,0.8992,1.4555,1.7839
+Ridge,TV+Radio+Newspaper,0.8703,0.0713,0.8993,1.4618,1.7833
+Linear (all 3),TV+Radio+Newspaper,0.8703,0.0718,0.8994,1.4608,1.7816

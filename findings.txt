@@ -1,0 +1,155 @@
+======================================================================
+DATA CLEANING REPORT
+======================================================================
+raw_rows                    : 768
+blank_rows_removed          : 28
+bad_date_rows_removed       : 0
+rows_with_missing_values    : 0
+duplicates_removed          : 0
+clean_rows                  : 740
+Period covered              : May 2019 to Jun 2020 (14 months)
+Regions / Areas             : 28 / ['Rural', 'Urban']
+Balanced series used for national trends: 44 of 55
+
+Rows per month (coverage is slightly uneven):
+Month
+May-2019    54
+Jun-2019    54
+Jul-2019    54
+Aug-2019    53
+Sep-2019    52
+Oct-2019    55
+Nov-2019    55
+Dec-2019    53
+Jan-2020    53
+Feb-2020    53
+Mar-2020    52
+Apr-2020    51
+May-2020    51
+Jun-2020    50
+
+Summary statistics:
+       Unemployment_Rate     Employed  Labour_Participation_Rate
+count             740.00       740.00                     740.00
+mean               11.79   7204460.03                      42.63
+std                10.72   8087988.43                       8.11
+min                 0.00     49420.00                      13.33
+25%                 4.66   1190404.50                      38.06
+50%                 8.35   4744178.50                      41.16
+75%                15.89  11275489.50                      45.50
+max                76.74  45777509.00                      72.57
+
+======================================================================
+NATIONAL TREND (employment-weighted, balanced panel)
+======================================================================
+Month
+May-2019     7.05
+Jun-2019     7.88
+Jul-2019     7.34
+Aug-2019     8.13
+Sep-2019     7.17
+Oct-2019     8.06
+Nov-2019     7.21
+Dec-2019     7.75
+Jan-2020     7.18
+Feb-2020     7.76
+Mar-2020     8.73
+Apr-2020    24.28
+May-2020    24.29
+Jun-2020    11.21
+
+======================================================================
+COVID-19 IMPACT
+======================================================================
+Pre-Covid average (May-19 to Feb-20): 7.55%
+Peak during Covid: 24.29% in May-2020  (x3.2 the pre-Covid level)
+Latest month (Jun-2020): 11.21%
+Rural: pre-Covid 6.96%  ->  peak 23.70% (Apr-20)  ->  latest 10.79%
+Urban: pre-Covid 8.77%  ->  peak 26.01% (May-20)  ->  latest 12.09%
+
+Employed persons (balanced panel), index pre-Covid avg = 100:
+Month
+May-2019     99.1
+Jun-2019     99.1
+Jul-2019     99.5
+Aug-2019     99.8
+Sep-2019    100.6
+Oct-2019    100.3
+Nov-2019     99.6
+Dec-2019    100.3
+Jan-2020    101.0
+Feb-2020    100.8
+Mar-2020     97.8
+Apr-2020     69.2
+May-2020     73.7
+Jun-2020     92.9
+Lowest employment index: 69.2 in Apr-2020 (~31% fewer employed than the pre-Covid average)
+Labour participation: pre-Covid avg 44.1% -> low 34.2% in Apr-2020
+
+Top 10 states by rise in unemployment (pre-Covid average -> Covid peak, percentage points):
+                Pre_Covid_avg  Peak_Covid  Latest  Increase_pp  Recovered_pp
+Region                                                                      
+Puducherry                1.7        75.9     4.5         74.1          71.3
+Jharkhand                11.8        59.2    21.0         47.4          38.2
+Tamil Nadu                2.8        49.8    13.5         47.1          36.4
+Bihar                    11.4        46.6    19.5         35.2          27.1
+Telangana                 4.7        34.8    15.5         30.1          19.3
+Delhi                    15.0        44.9    18.2         29.9          26.7
+Karnataka                 3.2        29.8     9.2         26.6          20.6
+Madhya Pradesh            4.3        27.5     8.2         23.2          19.2
+Punjab                   10.5        33.6    16.8         23.1          16.8
+Haryana                  22.6        43.2    33.6         20.6           9.7
+
+States where unemployment rose: 27 of 28
+Lowest rises: Uttarakhand, Jammu & Kashmir, Chandigarh
+
+Highest pre-Covid unemployment (structural problem):
+Region
+Tripura             28.3
+Haryana             22.6
+Himachal Pradesh    17.5
+Chandigarh          16.3
+Jammu & Kashmir     15.9
+Lowest pre-Covid unemployment:
+Region
+Odisha        3.7
+Karnataka     3.2
+Tamil Nadu    2.8
+Meghalaya     2.8
+Puducherry    1.7
+
+By zone:
+            Pre_Covid_avg  Peak_Covid  Increase_pp
+Zone                                              
+South                 4.1        28.6         24.6
+East                  8.2        32.5         24.3
+Central               5.1        23.5         18.4
+West                  5.1        20.1         14.9
+North-East            8.5        20.4         12.0
+North                11.8        22.0         10.2
+
+======================================================================
+SEASONALITY / PATTERNS
+======================================================================
+Pre-Covid national rate ranged 7.05% - 8.13% (std 0.41 pp); highest in Aug-2019, lowest in May-2019.
+NOTE: the data holds only one pre-Covid year, so each calendar month appears once. Month-of-year patterns below are indicative, not statistically proven seasonality.
+
+Same calendar month, year on year (removes seasonality from the Covid comparison):
+Year   2019   2020
+Month             
+Jun    7.88  11.21
+May    7.05  24.29
+
+Most volatile states before Covid (std dev of monthly rate, pp):
+Region
+Goa                6.69
+Chandigarh         5.01
+Jammu & Kashmir    4.71
+Delhi              3.61
+Haryana            3.59
+
+Correlation matrix:
+                           Unemployment_Rate  Employed  Labour_Participation_Rate
+Unemployment_Rate                       1.00     -0.22                       0.00
+Employed                               -0.22      1.00                       0.01
+Labour_Participation_Rate               0.00      0.01                       1.00

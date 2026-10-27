@@ -1,0 +1,79 @@
+{
+  "best_model_cv": "Poly deg-2 + Ridge",
+  "results": [
+    {
+      "Model": "Poly deg-2 + Ridge",
+      "Features": "TV+Radio",
+      "CV_R2": 0.9817,
+      "CV_R2_std": 0.0166,
+      "Test_R2": 0.9885,
+      "Test_MAE": 0.4932,
+      "Test_RMSE": 0.6034
+    },
+    {
+      "Model": "Gradient Boosting",
+      "Features": "TV+Radio+Newspaper",
+      "CV_R2": 0.9702,
+      "CV_R2_std": 0.0158,
+      "Test_R2": 0.9855,
+      "Test_MAE": 0.5724,
+      "Test_RMSE": 0.6766
+    },
+    {
+      "Model": "Linear + interaction",
+      "Features": "TV+Radio+TV_x_Radio",
+      "CV_R2": 0.959,
+      "CV_R2_std": 0.0279,
+      "Test_R2": 0.9743,
+      "Test_MAE": 0.6664,
+      "Test_RMSE": 0.9015
+    },
+    {
+      "Model": "Random Forest",
+      "Features": "TV+Radio+Newspaper",
+      "CV_R2": 0.9567,
+      "CV_R2_std": 0.0153,
+      "Test_R2": 0.9787,
+      "Test_MAE": 0.6558,
+      "Test_RMSE": 0.8201
+    },
+    {
+      "Model": "Linear (TV+Radio)",
+      "Features": "TV+Radio",
+      "CV_R2": 0.8736,
+      "CV_R2_std": 0.0726,
+      "Test_R2": 0.9006,
+      "Test_MAE": 1.4443,
+      "Test_RMSE": 1.7714
+    },
+    {
+      "Model": "Lasso",
+      "Features": "TV+Radio+Newspaper",
+      "CV_R2": 0.8715,
+      "CV_R2_std": 0.0688,
+      "Test_R2": 0.8992,
+      "Test_MAE": 1.4555,
+      "Test_RMSE": 1.7839
+    },
+    {
+      "Model": "Ridge",
+      "Features": "TV+Radio+Newspaper",
+      "CV_R2": 0.8703,
+      "CV_R2_std": 0.0713,
+      "Test_R2": 0.8993,
+      "Test_MAE": 1.4618,
+      "Test_RMSE": 1.7833
+    },
+    {
+      "Model": "Linear (all 3)",
+      "Features": "TV+Radio+Newspaper",
+      "CV_R2": 0.8703,
+      "CV_R2_std": 0.0718,
+      "Test_R2": 0.8994,
+      "Test_MAE": 1.4608,
+      "Test_RMSE": 1.7816
+    }
+  ],
+  "ols_all3_r2": 0.8972,
+  "ols_interaction_r2": 0.9678
+}
